@@ -10,7 +10,8 @@ body {
 @layer base {
   :root {
     /* --- Light Theme - Blue/Purple Palette --- */
-    --background: 210 40% 98%; /* Very Light Blue */
+    /* Updated background to a slightly richer light blue */
+    --background: 210 50% 96%; /* Richer Light Blue */
     --foreground: 240 10% 3.9%; /* Dark Grayish Blue */
 
     --card: 0 0% 100%; /* White */
@@ -68,7 +69,8 @@ body {
 
   .dark {
     /* --- Dark Theme - Blue/Purple Palette --- */
-    --background: 240 10% 11.1%; /* Very Dark Blue */
+    /* Updated background to a richer dark indigo/purple */
+    --background: 250 15% 13%; /* Dark Indigo/Purple */
     --foreground: 210 40% 98%; /* Light Grayish Blue */
 
     --card: 240 5.9% 15%; /* Slightly Lighter Dark Blue */
