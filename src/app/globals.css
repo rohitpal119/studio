@@ -130,9 +130,19 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Apply a subtle gradient background instead of a solid color */
+    @apply text-foreground;
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--primary) / 0.1) 50%, hsl(var(--accent) / 0.1) 100%), hsl(var(--background));
+    background-attachment: fixed; /* Keep gradient fixed during scroll */
+
     /* Add font smoothing for better text rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure dark mode gradient looks good too */
+  .dark body {
+     background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--primary) / 0.15) 50%, hsl(var(--accent) / 0.15) 100%), hsl(var(--background));
+     background-attachment: fixed;
   }
 }
