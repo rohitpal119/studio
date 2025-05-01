@@ -1,17 +1,15 @@
 import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
+// Import Inter font
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+// Configure Inter font
+const inter = Inter({
   subsets: ['latin'],
+  variable: '--font-inter', // Define CSS variable for Inter
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'Voice Interviewer',
@@ -24,8 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning> {/* Add suppressHydrationWarning for theme switching */}
+      {/* Apply Inter font variable to the body */}
+      <body className={`${inter.variable} font-sans antialiased`}> {/* Use font-sans utility */}
         <main>{children}</main>
         <Toaster />
       </body>
